@@ -6,3 +6,10 @@ export const AppStyle = styled.div`
   grid-gap: 16px;
   padding-bottom: 24px;
 `;
+
+export const DotLoaderStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+`;

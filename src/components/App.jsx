@@ -1,12 +1,12 @@
 import { Component } from 'react';
-// import { AppStyle } from './App.styled';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Audio } from 'react-loader-spinner';
+import DotLoader from "react-spinners/DotLoader";
 import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';
 import { PixabayApi } from "./utils/GalleryApi";
 import Button from "./Button";
+import { DotLoaderStyle } from "./App.styled";
 
 export class App extends Component {
   state = {
@@ -48,7 +48,7 @@ export class App extends Component {
       <>
         <Searchbar onSubmit={this.formSubmit} />
         {error && <h1>{error.message}</h1>}
-        {loading && <Audio />}
+        {loading && <DotLoaderStyle><DotLoader color="#36d7b7" /></DotLoaderStyle>}
         {images.length > 0 && <ImageGallery images={images} />}
         {images.length > 0 && <Button onClick={this.loadMore} />}
         <ToastContainer autoClose={1000} />
