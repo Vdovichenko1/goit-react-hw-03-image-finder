@@ -6,13 +6,11 @@ import PropTypes from 'prop-types';
 export default class ImageGalleryItem extends Component {
   state = {
     modal: false,
-    img: null
   };
 
     toggleModal = e => {
     this.setState(({modal}) => ({
       modal: !modal,
-      img: e
     }))
   }
 
